@@ -12,16 +12,10 @@
 // 4. stabiliamo se la somma è pari o dispari 
 // 5. stampiamo il vincitore 
 
-let sceltaUtente1 = prompt("Scegli tra pari e dispari");
-let sceltaUtente2 = parseInt(prompt("Scegli un numero da 1 a 5"));
-
+// funzioni
 function numerocomputer(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
-  }
-
-const numeropc = numerocomputer(1, 5);
-
-const sum = (sceltaUtente2 + numeropc);
+}
 
 function paridispari(sum)
 {
@@ -35,6 +29,13 @@ function paridispari(sum)
     }
 }
 
+
+let sceltaUtente1 = prompt("Scegli tra pari e dispari");
+let sceltaUtente2 = parseInt(prompt("Scegli un numero da 1 a 5"));
+
+const numeropc = numerocomputer(1, 5);
+
+const sum = (sceltaUtente2 + numeropc);
 
 if (paridispari(sum) == true)
 {
