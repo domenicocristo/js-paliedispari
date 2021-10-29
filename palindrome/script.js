@@ -4,7 +4,7 @@
 // Dare l’output relativo.
 
 // chiedo la parola all'utente
-var word = prompt("Inserisci una parola");
+var word = prompt('Inserisci una parola');
 
 var reverseword = inverterword(word);
 
@@ -17,6 +17,6 @@ if(word == reverseword){
   
 // funzione 
 function inverterword(word){
-  var wordInverter = word.split('');  
+  var wordInverter = word.split('').reverse().join('');
   return wordInverter;
 }
