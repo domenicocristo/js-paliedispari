@@ -17,6 +17,6 @@ if(word == reverseword){
   
 // funzione 
 function inverterword(word){
-  var wordInverter = word.split('').reverse().join('');  
+  var wordInverter = word.split('');  
   return wordInverter;
 }
