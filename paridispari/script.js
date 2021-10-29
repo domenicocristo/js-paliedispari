@@ -16,9 +16,34 @@ let sceltaUtente1 = prompt("Scegli tra pari e dispari");
 let sceltaUtente2 = parseInt(prompt("Scegli un numero da 1 a 5"));
 
 function numerocomputer(min, max) {
-    return Math.random() * (max - min) + min;
+    return Math.floor(Math.random() * (max - min) + min);
   }
 
-const numeropc = numerocomputer(1, 5).toFixed(0);
+const numeropc = numerocomputer(1, 5);
+
 const sum = (sceltaUtente2 + numeropc);
-console.log(numeropc);
+
+function paridispari(sum)
+{
+    if (isNaN(sum) == false)
+    {
+        return (sum %2 == 1 ?  true : false);
+    }
+    else
+    {
+        return null;
+    }
+}
+
+
+if (paridispari(sum) == true)
+{
+    alert("Vince dispari");
+}
+else
+{
+    alert("Vince pari");
+}
+
+console.log("Il numero del pc: ", numeropc);
+console.log("La somma è:", sum);
